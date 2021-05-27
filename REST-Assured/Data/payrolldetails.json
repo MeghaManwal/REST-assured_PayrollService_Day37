@@ -1,0 +1,25 @@
+{
+"Payroll":[
+    {
+        "firstName": "Mary",
+        "lastName": "James",
+        "Gender": "M",
+        "BasicPay": 50000,
+        "Id": 1
+    },
+    {
+        "firstName": "Bill",
+        "lastName": "Potter",
+        "Gender": "M",
+        "BasicPay": 60000,
+        "Id": 2
+    },
+    {
+        "firstName": "Tracy",
+        "lastName": "Bennet",
+        "Gender": "F",
+        "BasicPay": 55000,
+        "Id": 3
+    }
+]
+}
