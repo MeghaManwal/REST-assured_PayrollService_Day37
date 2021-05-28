@@ -2,17 +2,24 @@ package com.payrollservice;
 
 public class PayrollData {
 	
-	private int Id;
+	private int id;
 	private String firstName;
 	private String lastName;
 	private String Gender;
 	private int BasicPay;
 	
+	public PayrollData( String firstName, String lastName, String gender, int basicPay) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		Gender = gender;
+		BasicPay = basicPay;
+		
+	}
 	public int getId() {
-		return Id;
+		return id;
 	}
 	public void setId(int id) {
-		this.Id = id;
+		this.id = id;
 	}
 	public String getFirstName() {
 		return firstName;
@@ -39,12 +46,11 @@ public class PayrollData {
 	public void setBasicPay(int basicPay) {
 		BasicPay = basicPay;
 	}
+	
 	@Override
 	public String toString() {
-		return "PayrollData [Id=" + Id + ", firstName=" + firstName + ", lastName=" + lastName + ", Gender=" + Gender
+		return "PayrollData [Id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", Gender=" + Gender
 				+ ", BasicPay=" + BasicPay + "]";
 	}
-	
-	
 	
 }
