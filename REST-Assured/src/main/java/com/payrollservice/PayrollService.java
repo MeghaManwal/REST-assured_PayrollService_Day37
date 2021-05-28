@@ -1,6 +1,7 @@
 package com.payrollservice;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class PayrollService {
@@ -26,6 +27,15 @@ public class PayrollService {
 
 	public void addRecordToPayroll(PayrollData payrolldata) {
 		payroll.add(payrolldata);
+		
+	}
+	
+	public void addRecordToPayroll(PayrollData[] payrolldata) {
+		payroll = Arrays.asList(payrolldata);
+	}
+
+
+	public void updateBasicPay(String string, int i) {
 		
 	}
    
