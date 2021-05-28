@@ -17,9 +17,9 @@ public class PayrollService {
 		
 	}
 	
-    public PayrollService(List<PayrollData> list) {
+     public PayrollService(List<PayrollData> list) {
 		this.payroll = new ArrayList<>(list);
-	}
+	 }
 
 	public int countEntries() {
 		return  payroll.size();

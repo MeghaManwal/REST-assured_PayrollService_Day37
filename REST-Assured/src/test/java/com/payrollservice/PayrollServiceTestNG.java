@@ -11,6 +11,7 @@ public class PayrollServiceTestNG {
 	@DataProvider(name = "dataforpost")
 	public Object[][] dataforPost() {
 		return new Object[][] {
+			
 			{"Rizvaan", "Khan", "M", 66000},
 			{"Nia", "James","F",75000},
 			{"Robert", "Hook","M",85000}
@@ -58,8 +59,26 @@ public class PayrollServiceTestNG {
 		      patch("/Payroll/4").
 		then().
 		      statusCode(200).
-		      log().all();
-
-		
+		      log().all();	
 	}
+	
+	@DataProvider(name = "datafordelete")
+	public Object[] dataforDelete() {
+		return new Object[] {
+			5,6,7
+		};	
+	}
+	
+
+	@Test(dataProvider ="datafordelete")
+	public void deleteDatafromExistingRecord_shouldReturn_200statusCode(int id) {
+		baseURI ="http://localhost";
+		port = 3000;
+		
+		when().
+		       delete("/Payroll/"+id).
+		then().
+		       statusCode(200);
+		
+	}	
 }
