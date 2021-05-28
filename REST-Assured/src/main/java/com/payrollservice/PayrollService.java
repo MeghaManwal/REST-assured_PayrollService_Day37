@@ -33,10 +33,5 @@ public class PayrollService {
 	public void addRecordToPayroll(PayrollData[] payrolldata) {
 		payroll = Arrays.asList(payrolldata);
 	}
-
-
-	public void updateBasicPay(String string, int i) {
-		
-	}
    
 }

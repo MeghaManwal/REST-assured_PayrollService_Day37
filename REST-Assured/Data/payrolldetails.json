@@ -24,9 +24,30 @@
     {
       "id": 4,
       "firstName": "Rachel",
-      "lastName": "Brown",
+      "lastName": "Stuart",
       "Gender": "F",
       "BasicPay": 56000
+    },
+    {
+      "firstName": "Rizvaan",
+      "lastName": "Khan",
+      "BasicPay": 66000,
+      "Gender": "M",
+      "id": 5
+    },
+    {
+      "firstName": "Nia",
+      "lastName": "James",
+      "BasicPay": 75000,
+      "Gender": "F",
+      "id": 6
+    },
+    {
+      "firstName": "Robert",
+      "lastName": "Hook",
+      "BasicPay": 85000,
+      "Gender": "M",
+      "id": 7
     }
   ]
 }

@@ -35,7 +35,7 @@ public class PayrollService_test {
 		PayrollData[] empArray = getEmployeeList();
 		PayrollService payrollservice = new PayrollService(Arrays.asList(empArray));
 		int entries = payrollservice.countEntries();
-		assertEquals(4, entries);
+		assertEquals(7, entries);
 	}
 	
 	public Response addPayrollRecord(PayrollData payrolldata) {
@@ -64,36 +64,5 @@ public class PayrollService_test {
 		int entries = payrollservice.countEntries();
 		assertEquals(4, entries);
 		
-	}
-	
-	public Response addPayrollRecord(PayrollData[] payrolldata) {
-		String empJson = new Gson().toJson(payrolldata);
-		RequestSpecification request = given();
-		request.header("Content-Type", "application/json");
-		System.out.println(empJson);
-		request.body(empJson);
-		return request.post("/Payroll");
-	}
-	
-	@Test
-	public void givennewPayrollRecord_whenAdded_shouldreturn201statusCodeandCount() {
-		PayrollData[] empArray = getEmployeeList();
-		PayrollService payrollservice = new PayrollService(Arrays.asList(empArray));
-				
-		PayrollData[] payrolldata = {
-		new PayrollData("Rizvaan", "Khan", "M", 66000),
-		new PayrollData("Nia", "James","F",75000),
-		new PayrollData("Robert", "Hook","M",85000)
-		};
-		
-		Response response = addPayrollRecord(payrolldata);
-
-		int statusCode = response.getStatusCode();
-		assertEquals(201, statusCode);
-		
-		payrolldata = new Gson().fromJson(response.asString(), PayrollData[].class);
-		payrollservice.addRecordToPayroll(payrolldata);
-			
-	}
-	
+	}	
 }	
